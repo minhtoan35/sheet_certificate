@@ -1,0 +1,139 @@
+.error {
+  background-color: rgb(248, 101, 101);
+}
+
+.success {
+  background-color: #42ba96;
+}
+
+.file-input {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.input-file {
+    border: 2px solid rgb(255, 106, 107);
+    padding: 1rem 2rem;
+    position: absolute;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: 0.3s all;
+    z-index: 1;
+    color: rgb(255, 106, 107);
+    font-weight: 600;
+    display: inline-blocks;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background: rgb(255, 106, 107);
+        transition: 0.5s ease;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        width: 105%;
+    }
+
+    &:hover {
+        color: #111;
+    }
+}
+
+table {
+    width: 100%;
+    background-color: #fff;
+}
+
+td,
+th {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border: 1px solid #000;
+}
+
+.btn-add {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  .btn-add {
+    --border-right: 4px;
+    --text-stroke-color: rgb(255, 106, 107);
+    --animation-color: rgb(255, 106, 107);
+    --fs-size: 1.5rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--text-stroke-color);
+  
+    &.text-success {
+      --text-stroke-color: #fff;
+      --animation-color: #fff;
+    }
+  
+    .hover-text {
+      position: absolute;
+      content: attr(data-text);
+      color: var(--animation-color);
+      width: 0%;
+      inset: 0;
+      border-right: var(--border-right) solid var(--animation-color);
+      overflow: hidden;
+      transition: 0.5s;
+      -webkit-text-stroke: 1px var(--animation-color);
+    }
+  
+    &:hover .hover-text {
+      width: 100%;
+      filter: drop-shadow(0 0 23px var(--animation-color))
+    }
+  }
+
+  select {
+    padding:  1rem;
+    border-radius: 1rem;
+  }
+
+
+  .btn-download {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 40px;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #FFF;
+
+    background-color: rgb(255, 106, 107);
+    border: none;
+    border-bottom: 5px solid rgb(193, 78, 78);
+    text-shadow: 0px -2px rgb(193, 78, 78);
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.btn-download:hover,
+.btn-download:active {
+    -webkit-transform: translate(0px, 5px);
+    -ms-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
+    border-bottom: 1px solid rgb(255, 106, 107);
+}
