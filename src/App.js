@@ -13,6 +13,7 @@ const App = () => {
   const [data2, setData2] = useState([]);
   const [certificate, setCertificate] = useState([]);
 
+
   const readExcel = (file) => {
     const promise = new Promise((resolve, reject) => {
       const fileReader = new FileReader();
